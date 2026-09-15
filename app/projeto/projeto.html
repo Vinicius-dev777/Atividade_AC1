@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="projeto.css">
+<script src="projeto.ts" defer> </script>
+<div class="catalogo-container">
+  <h1> Catálogo de Filmes</h1>
+
+  <div class="adicionar-filme-card">
+    
+    <input 
+      type="text" 
+      [(ngModel)]="novoFilme" 
+      placeholder="Digite o nome do filme..."
+    >
+    
+    <button 
+      [disabled]="!novoFilme.trim()" 
+      (click)="adicionarFilme()"
+      class="btn-adicionar">
+      Adicionar
+    </button>
+  </div>
+
+  <div class="conteudo-principal">
+    
+    
+    <div class="lista-container">
+      <h3>Lista de Filmes</h3>
+      <ul class="lista-filmes">
+        
+        @for (filme of filmes; track $index) {
+          
+          <li (click)="selecionarFilme(filme)">
+            {{ filme }}
+          </li>
+        }
+      </ul>
+    </div>
+
+    
+    <div class="detalhes-container">
+      
+      @if (filmeSelecionado) {
+        
+       
+        <div class="card-detalhes" [class.filme-favorito]="isFavorito">
+          
+          
+          <h2>{{ filmeSelecionado }}</h2>
+          <p> Visualizações: <strong>{{ visualizacoes }}</strong></p>
+          
+          <div class="botoes-acao">
+            <button (click)="aumentarVisualizacoes()" class="btn-assistir">
+              Assistir (+1)
+            </button>
+            <button (click)="alternarFavorito()" class="btn-favoritar">
+              
+              {{ isFavorito ? ' Remover dos favoritos' : ' Adicionar aos favoritos' }}
+            </button>
+          </div>
+        </div>
+
+      } @else {
+        <div class="mensagem-vazia">
+          <p>Nenhum filme selecionado. Clique em um filme na lista para ver os detalhes.</p>
+        </div>
+      }
+    </div>
+
+  </div>
+</div>

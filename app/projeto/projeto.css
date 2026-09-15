@@ -1,0 +1,143 @@
+
+.catalogo-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+
+.adicionar-filme-card {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-adicionar {
+  padding: 10px 20px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-adicionar:disabled {
+  background-color: #a5c8ff;
+  cursor: not-allowed;
+}
+
+
+.conteudo-principal {
+  display: flex;
+  gap: 20px;
+}
+
+.lista-container {
+  flex: 1;
+}
+
+.lista-filmes {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-filmes li {
+  background-color: white;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border-left: 4px solid #0d6efd;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.lista-filmes li:hover {
+  background-color: #e9ecef;
+  transform: translateX(5px);
+}
+
+
+.detalhes-container {
+  flex: 1;
+}
+
+.card-detalhes {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent; 
+}
+
+
+.filme-favorito {
+  border: 2px solid #ffc107;
+  background-color: #fffdf5;
+}
+
+.mensagem-vazia {
+  background-color: #e9ecef;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
+
+.botoes-acao {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-assistir {
+  background-color: #198754;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-assistir:hover { background-color: #146c43; }
+
+.btn-favoritar {
+  background-color: #ffc107;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-favoritar:hover { background-color: #ffca2c; }
